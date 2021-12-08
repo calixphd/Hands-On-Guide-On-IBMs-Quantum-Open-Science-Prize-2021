@@ -25,10 +25,13 @@ RUN apt-get install curl -y
 RUN ln -s /usr/local/bin/python3.9 /usr/bin/python
 RUN wget https://bootstrap.pypa.io/get-pip.py && python get-pip.py
 
+RUN apt-get install git -y
+
 RUN pip install --upgrade pip
 
 RUN pip install jupyter --upgrade
 RUN pip install jupyterlab --upgrade
+RUN pip install jupyterlab-git
 
 RUN unlink /usr/bin/python
 RUN ln -s /usr/local/bin/python3.9 /usr/bin/python
