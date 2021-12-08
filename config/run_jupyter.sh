@@ -17,6 +17,10 @@ cp -r ${CONFIG_PATH}/start.py  ~/.ipython/profile_default/startup/
 
 cd ${MAIN_PATH}
 
+cp -r ${MAIN_PATH}/.ssh/  /root/.ssh
+ssh-add /root/.ssh/id_ed2559
+
+
 #mkdir notebooks
 
 jupyter lab
