@@ -48,6 +48,8 @@ RUN cd ~ && curl -sL https://deb.nodesource.com/setup_14.x -o nodesource_setup.s
 
 RUN pip install mitiq==0.13.0
 
+RUN pip install tensorflow
+
 
 ENV MAIN_PATH=/usr/local/bin/jpl_config
 ENV LIBS_PATH=${MAIN_PATH}/libs
